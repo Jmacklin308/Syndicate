@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://co3gtnnig1j1s"]
+
+[ext_resource type="AudioStream" uid="uid://6b8xhiuv3dni" path="res://audio/Downtempo - Serenade Loop.wav" id="1_3udvj"]
+[ext_resource type="Script" path="res://scripts/Audio/background_music.gd" id="2_jsebs"]
+[ext_resource type="AudioStream" uid="uid://cfas3mgk88mkl" path="res://audio/Ambiance_City_Traffic_01.wav" id="2_ra0t7"]
+[ext_resource type="Script" path="res://scripts/Audio/ambiance.gd" id="4_kf3hn"]
+
+[node name="Audio" type="Node2D"]
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_3udvj")
+volume_db = -9.36
+autoplay = true
+script = ExtResource("2_jsebs")
+
+[node name="Ambiance" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ra0t7")
+volume_db = -19.76
+autoplay = true
+script = ExtResource("4_kf3hn")
+
+[connection signal="finished" from="Background Music" to="Background Music" method="_on_finished"]
+[connection signal="finished" from="Ambiance" to="Ambiance" method="_on_finished"]

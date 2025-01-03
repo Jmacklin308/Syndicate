@@ -17,12 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalData="*res://scripts/global_data.gd"
-BackgroundMusic="*res://scenes/background_music.tscn"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg")
+GlobalData="*res://scripts/Core/global_data.gd"
+BackgroundMusic="*res://scenes/audio.tscn"
+Stats="*res://scripts/Core/stats.gd"
+Helpers="*res://scripts/Core/helpers.gd"
 
 [rendering]
 
